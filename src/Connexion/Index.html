@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Connexion BlockChain</title>
+        <link rel="stylesheet" type="text/css" href="connexion.css">
+        <link rel="icon" href="../images/map_icon.png" />
+        <script type="text/javascript" src="connexion.js"></script>
+    </head>
+    <body onload="exText(), mdpText()">
+        <div id="ConnexionBox">
+            <div id="textConnexion">Connexion</div>
+            <p>avec votre compte BlockChain</p>
+            <form method="post" action="index.php">
+                <label for="Identifiant" class="labelBoites">Adresse e-mail</label>
+                <input class="boites" id="mail" type="email" name="user_mail" placeholder="ex : XXXXX@estiam.com" onblur="verifEmail(this)"/>
+                <div id="msgErreurMail"></div>
+                
+                <label for="Identifiant" class="labelBoites">Mot de passe</label>
+                <input class="boites" id="mdp" type="password" name="user_mdp" placeholder="••••••••••••" onblur="verifMdp(this)"/>
+                <div id="msgErreurMdp"></div>
+                
+                <input id="submitButton" type="submit" value="Connexion" name="connexion"/>
+            </form>
+        </div>
+        <div id="noAccount">Pas de compte ? 
+            <a href="../Inscription/index.html" id="inscription">Inscrivez-vous !</a>
+        </div>
+        <div id="noAccount">Mode Invité 
+            <a href="../Home/Index.html" id="inscription">Check it !</a>
+        </div>
+    </body>
+</html>
